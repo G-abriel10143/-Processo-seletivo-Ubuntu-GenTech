@@ -1,0 +1,45 @@
+    h1.titulo {
+        color: #5F1CA1;
+        position: absolute;
+        width: 904px;
+        height: 168px;
+        left: 228px;
+        top: 94px;
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 59px;
+        line-height: 64px;
+        text-align: center;
+    }
+
+    .hexagon {
+        width: 100px;
+        height: 115.47px;
+        background-color: red;
+        position: relative;
+        clip-path: polygon(50% 0%, 90.51% 25%, 90.51% 75%, 50% 100%, 9.49% 75%, 9.49% 25%);
+      }
+      
+      
+      
+      .hexagon:before,
+      .hexagon:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: inherit;
+        height: inherit;
+        background-color: inherit;
+        transform-origin: center center;
+      }
+      
+      .hexagon:before {
+        transform: rotate(60deg);
+      }
+      
+      .hexagon:after {
+        transform: rotate(-60deg);
+      }
+      
