@@ -1,43 +1,22 @@
-const carrossel = document.querySelector('.carrossel-container');
-const carrosselItems = document.querySelectorAll('.carrossel-item');
-const bolinhas = document.querySelectorAll('.bolinha');
+const carousel = document.querySelector('.carousel-items');
+const prevButton = document.querySelector('.carousel-prev');
+const nextButton = document.querySelector('.carousel-next');
 
-let itemAtual = 0;
+let position = 0;
+const slideWidth = carousel.clientWidth / 3;
+const slidesToScroll = 1;
 
-// adiciona um listener ao botão de próxima imagem
-document.querySelector('#proximo').addEventListener('click', function() {
-  if (itemAtual < carrosselItems.length - 1) {
-    itemAtual++;
-    atualizaCarrossel();
-  }
+prevButton.addEventListener('click', () => {
+  const slidesToShow = Math.min(carousel.childElementCount, 3);
+  position += slidesToScroll * slideWidth;
+  position = Math.min(position, 0);
+  carousel.style.transform = `translateX(${position}px)`;
 });
 
-// adiciona um listener ao botão de imagem anterior
-document.querySelector('#anterior').addEventListener('click', function() {
-  if (itemAtual > 0) {
-    itemAtual--;
-    atualizaCarrossel();
-  }
+nextButton.addEventListener('click', () => {
+  const slidesToShow = Math.min(carousel.childElementCount, 3);
+  position -= slidesToScroll * slideWidth;
+  const lastPosition = -(carousel.childElementCount - slidesToShow) * slideWidth;
+  position = Math.max(position, lastPosition);
+  carousel.style.transform = `translateX(${position}px)`;
 });
-
-// adiciona um listener para cada bolinha
-bolinhas.forEach((bolinha, index) => {
-  bolinha.addEventListener('click', function() {
-    itemAtual = index;
-    atualizaCarrossel();
-  });
-});
-
-// função que atualiza o carrossel com o item atual
-function atualizaCarrossel() {
-  // remove a classe "ativa" de todas as bolinhas
-  bolinhas.forEach((bolinha) => {
-    bolinha.classList.remove('ativa');
-  });
-
-  // adiciona a classe "ativa" na bolinha correspondente ao item atual
-  bolinhas[itemAtual].classList.add('ativa');
-
-  // atualiza a posição do carrossel
-  carrossel.style.transform = `translateX(-${itemAtual * 100}%)`;
-}

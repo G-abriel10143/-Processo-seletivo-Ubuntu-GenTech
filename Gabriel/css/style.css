@@ -20,68 +20,48 @@ h1.titulo {
   text-align: center;
 }
 
-.carrossel-container {
+.carousel-container {
+  position: fixed;
+  width: 90%;
+  top: 40%;
+  left: 6%;
+}
+
+.carousel-wrapper {
   display: flex;
-  position: relative;
-  justify-content: center;
-  top: 241px;
+  transition: transform 0.3s ease-in-out;
 }
 
-.carrossel-item {
-  scroll-snap-align: start;
+.carousel-items {
+  display: flex;
+  flex-wrap: nowrap;
+  width: calc(100% * 5);
 }
 
-.carrossel-item img {
-  width: 100%;
+.carousel-item {
+  flex: 0 0 calc(100% / 3);
+}
+
+.carousel-item img {
+  display: block;
+  max-width: 100%;
   height: auto;
 }
 
-.capelo {
+.carousel-prev,
+.carousel-next {
   position: absolute;
-  top: 25%;
-  left: 17%;
-  transform: translate(-50%, -50%);
-  width: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  width: 50px;
+  height: 50px;
 }
 
-.cerebro {
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60px;
+.carousel-prev {
+  left: 0;
 }
 
-.pasta {
-  position: absolute;
-  top: 25%;
-  left: 84%;
-  transform: translate(-50%, -50%);
-  width: 60px;
-}
-
-.carrossel-container {
-  position: relative;
-}
-
-.bolinhas-carrossel {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-}
-
-.bolinha {
-  width: 10px;
-  height: 10px;
-  border: none;
-  border-radius: 50%;
-  background-color: #ccc;
-  cursor: pointer;
-}
-
-.bolinha.ativa {
-  background-color: #333;
+.carousel-next {
+  right: 0;
 }
