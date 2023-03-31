@@ -1,58 +1,87 @@
-    h1.titulo {
-      color: #5F1CA1;
-      position: absolute;
-      width: 904px;
-      height: 168px;
-      left: 228px;
-      top: 94px;
-      font-family: 'Nunito';
-      font-style: normal;
-      font-weight: 800;
-      font-size: 59px;
-      line-height: 64px;
-      text-align: center;
-    }
+body {
+  background-image: url('../img/planoDeFundo.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
-    .hexagon1 {
-      height: 460px;
-      top: 193px;
-      position: relative;
-    }
+h1.titulo {
+  color: #5F1CA1;
+  position: absolute;
+  width: 904px;
+  height: 168px;
+  left: 228px;
+  top: 94px;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 59px;
+  line-height: 64px;
+  text-align: center;
+}
 
-    .hexagon2 {
-      height: 460px;
-      top: 193px;
-      position: relative;
-    }
+.carrossel-container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  top: 241px;
+}
 
-    .hexagon3 {
-      height: 460px;
-      top: 193px;
-      position: relative;
-    }
-    .carousel-container {
-      display: flex;
-      overflow-x: scroll;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-    }
-    
-    .carousel-item {
-      flex: 0 0 auto;
-      width: 100vw;
-      height: 100vh;
-      scroll-snap-align: start;
-    }
-    
-    .hexagon {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      height: 80%;
-      width: auto;
-      max-width: 80%;
-      border: 2px solid black;
-      background-color: white;
-    }
-    
+.carrossel-item {
+  scroll-snap-align: start;
+}
+
+.carrossel-item img {
+  width: 100%;
+  height: auto;
+}
+
+.capelo {
+  position: absolute;
+  top: 25%;
+  left: 17%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+}
+
+.cerebro {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+}
+
+.pasta {
+  position: absolute;
+  top: 25%;
+  left: 84%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+}
+
+.carrossel-container {
+  position: relative;
+}
+
+.bolinhas-carrossel {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.bolinha {
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.bolinha.ativa {
+  background-color: #333;
+}
