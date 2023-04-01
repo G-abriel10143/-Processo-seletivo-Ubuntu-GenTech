@@ -65,3 +65,44 @@ h1.titulo {
 .carousel-next {
   right: 0;
 }
+
+.carousel-item {
+  position: relative;
+  width: 33.333%;
+}
+
+.carousel-item img {
+  max-width: 100%;
+}
+
+.texto-hexagono {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  width: 80%;
+  height: 80%;
+}
+
+.texto-hexagono p {
+  font-size: 1.2em;
+  position: relative;
+  color: #7723C9;
+}
+
+.texto-hexagono ul {
+  list-style: disc;
+  margin: 8px 65px;
+  padding-left: 20px;
+  color: black;
+}
+
+.img-hexagono {
+    display: inline-block;
+    bottom: 80%;
+    position: relative;
+    width: 15%;
+    left: 43%;
+}
