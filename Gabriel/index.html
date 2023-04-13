@@ -1,117 +1,96 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Ubuntu GenTech</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Desafio Ubuntu sobre saude">
+    <title>Desafio Ubuntu</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;900&display=swap" rel="stylesheet">
+    <script defer src="./js/main.js"></script>
 </head>
-
-<body>
-  <div class="container">
-    <div>
-      <h1 class="titulo">Conheça mais sobre o resultado</h1>
-    </div>
-    <div class="carousel-container">
-      <div class="carousel-wrapper">
-        <div class="carousel-items">
-          <div class="carousel-item">
-            <img src="img/hexagono.jpeg">
-            <div class="img-hexagono">
-              <img src="img/capelo.jpeg" alt="Descrição da Imagem">
-            </div>
-            <div class="texto-hexagono">
-              <p>EDUCAÇÃO E PERFORMANCE
-              </p>
-              <ul>
-                <li>Memoria operacional</li>
-                <li>Tempo de reação a estímulos</li>
-                <li>Raciocínio lógico</li>
-                <li>Rendimento Educacional</li>
-                <li>Performance Cognitiva</li>
-                <li>TDAH</li>
-                <li>AUTISMO</li>
-                <li>DISLEXIA</li>
-              </ul>             
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="img/hexagono.jpeg">
-            <div class="img-hexagono">
-              <img src="img/cerebro.jpeg" alt="Descrição da Imagem">
-            </div>
-            <div class="texto-hexagono">
-              <p>COMPORTAMENTO E PERSONALIDADE
-              </p>
-              <ul>
-                <li>Comportamento antisocial</li>
-                <li>Comportamentos de risco</li>
-                <li>Instabilidade emocional (neuroticismo)</li>
-              </ul>              
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="img/hexagono.jpeg">
-            <div class="img-hexagono">
-              <img src="img/pasta.jpeg" alt="Descrição da Imagem">
-            </div>
-            <div class="texto-hexagono">
-              <p>BEM-ESTAR/QUALIDADE DE VIDA
-              </p>
-              <ul>
+<body class="body">
+    <header class="header">
+        <h1 class="title">Conheça mais sobre o resultado</h1>
+    </header> 
+        
+    <main id="mainContainer">
+    <div id="slider" class="slider">
+        <section id="first" class="first">
+            <div class="div_text">
+            <img src="./assets/img/Icons-carrousel/Icon-well-being.png" alt="Icone camera fotografica" class="camera">
+            <h2 class="title_card">Bem-estar / qualidade de vida</h2>
+            <ul>
                 <li>CRONÓTIPO</li>
                 <li>INSONIA</li>
-              </ul>              
+            </ul>
             </div>
-          </div>
-          <div class="carousel-item">
-            <img src="img/hexagono.jpeg">
-            <div class="img-hexagono">
-              <img src="img/capelo.jpeg" alt="Descrição da Imagem">
-            </div>
-            <div class="texto-hexagono">
-              <p>EDUCAÇÃO E PERFORMANCE
-              </p>
-              <ul>
+        </section>
+        <section id="one" class="one">
+            <div class="div_text">
+            <img src="./assets/img/Icons-carrousel/Icon-education.png" alt="Icone de um chapeu de graduação" class="hat">
+            <h2 class="title_card">Educação e performance</h2>
+            <ul>
                 <li>Memoria operacional</li>
                 <li>Tempo de reação a estímulos</li>
                 <li>Raciocínio lógico</li>
-                <li>Rendimento Educacional</li>
-                <li>Performance Cognitiva</li>
+                <li>Performance Cogritiva</li>
                 <li>TDAH</li>
-                <li>AUTISMO</li>
-                <li>DISLEXIA</li>
-              </ul>             
+                <li>Autismo</li>
+                <li>Dislexia</li>
+            </ul>
             </div>
-          </div>
-          <div class="carousel-item">
-            <img src="img/hexagono.jpeg">
-            <div class="img-hexagono">
-              <img src="img/cerebro.jpeg" alt="Descrição da Imagem">
-            </div>
-            <div class="texto-hexagono">
-              <p>COMPORTAMENTO E PERSONALIDADE
-              </p>
-              <ul>
+        </section>
+        <section id="two" class="two">
+            <div class="div_text">
+            <img src="./assets/img/Icons-carrousel/Icon-performance.png" alt="Icone de um cérebro" class="brain">
+            <h2 class="title_card">Comportamento e personalidade</h2>
+            <ul>
                 <li>Comportamento antisocial</li>
-                <li>Comportamentos de risco</li>
+                <li>Comportamento de risco</li>
                 <li>Instabilidade emocional (neuroticismo)</li>
-              </ul>              
+            </ul>
             </div>
-          </div>
+        </section>
+        <section id="three" class="three">
+            <div class="div_text">
+            <img src="./assets/img/Icons-carrousel/Icon-well-being.png" alt="Icone camera fotografica" class="camera">
+            <h2 class="title_card">Bem-estar / Qualidade de vida</h2>
+            <ul>
+                <li>CRONÓTIPO</li>
+                <li>INSONIA</li>
+            </ul>
+            </div>
+        </section>
+        <section id="five" class="five">
+            <div class="div_text">
+            <img src="./assets/img/Icons-carrousel/Icon-education.png" alt="Icone de um chapeu de graduação" class="hat">
+            <h2  class="title_card">Educação e performance</h2>
+            <ul>
+                <li>Memoria operacional</li>
+                <li>Tempo de reação a estímulos</li>
+                <li>Raciocínio lógico</li>
+                <li>Performance Cogritiva</li>
+                <li>TDAH</li>
+                <li>Autismo</li>
+                <li>Dislexia</li>
+            </ul>
+            </div>
+        </section>
+    </div>
+</main>
+<section class="btnBox">
+        <div class="btnBackground">
+            <button class="btn" id="left" aria-label="botao esquerdo"></button>
+            <button class="btn active" id="center" aria-label="botao meio"></button>
+            <button class="btn" id="right" aria-label="botao direito"></button>
         </div>
-
-      </div>
-    </div>
-
-    <div class="botoes">
-      <button class="carousel-prev">Anterior</button>
-      <button class="carousel-next">Próximo</button>
-    </div>
-  </div>
-  <script src="js/script.js"></script>
+    </section>
 </body>
-
 </html>
